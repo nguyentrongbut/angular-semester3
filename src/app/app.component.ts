@@ -7,6 +7,7 @@ import { RippleModule} from "primeng/ripple";
 import {PrimeNGConfig} from "primeng/api";
 import {MultiSelectModule} from "primeng/multiselect";
 import {FormsModule} from "@angular/forms";
+import {HeaderComponent} from "./header/header.component";
 
 interface City {
   name: string,
@@ -16,28 +17,10 @@ interface City {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ButtonModule, RippleModule, MultiSelectModule, FormsModule],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  title = 'angular-semester3';
+export class AppComponent {
 
-  constructor(private primengConfig: PrimeNGConfig) { }
-
-  cities!: City[];
-
-  selectedCities!: City[];
-
-  ngOnInit() {
-    this.primengConfig.ripple = true;
-
-    this.cities = [
-      {name: 'New York', code: 'NY'},
-      {name: 'Rome', code: 'RM'},
-      {name: 'London', code: 'LDN'},
-      {name: 'Istanbul', code: 'IST'},
-      {name: 'Paris', code: 'PRS'}
-    ];
-  }
 }
