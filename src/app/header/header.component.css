@@ -114,9 +114,11 @@
     height: 16px;
     background: #e5e5e5;
 }
+
 .top-act__btn--single {
     border: 1px solid #ccc;
 }
+
 .top-act__btn {
     font-family: 'Inter var', sans-serif;
 
